@@ -1,0 +1,21 @@
+tmp = int(input())
+M = 1000-tmp
+cnt = 0
+if(M >= 500):
+    M = M % 500
+    cnt = cnt+1
+if(M >= 100):
+    cnt += (M//100)
+    M = M % 100
+if(M >= 50):
+    cnt += (M//50)
+    M = M % 50
+if(M >= 10):
+    cnt += (M//10)
+    M = M % 10
+if(M >= 5):
+    cnt += (M//5)
+    M = M % 5
+if(M >= 1):
+    cnt += M
+print(cnt)
