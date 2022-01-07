@@ -1,10 +1,9 @@
 array = list(map(int,input().split()))
 
 for i in range(len(array)):
-    bound = i
+    bound_index = i
     for j in range(i+1,len(array)):
-        if(array[bound]> array[j]):
-            bound = j
-        array[i], array[bound] = array[bound],array[i]
-
+        if(array[bound_index]> array[j]):
+            bound_index = j
+    array[bound_index], array[i] =  array[i],array[bound_index]
 print(array)
